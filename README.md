@@ -29,6 +29,6 @@ const options = {
 ```js
 TopicList:["test1","test2","test3","test4"]
 ```
-
-
+## 注：mqtt.js文件下载链接
+https://unpkg.com/browse/mqtt@3.0.0/dist/
 
