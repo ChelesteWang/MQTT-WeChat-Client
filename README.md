@@ -6,9 +6,18 @@
 ## Quick Start 快速开始
 
 ```shell
-git clone 
+git clone https://github.com/yuqing521/WXapp_MQTT.git
 ```
 
 克隆本项目后
 
 修改根目录下的 config.js 修改 mqtt 服务器地址，以及端口号来进行连接
+
+```js 
+const options = {
+    connectTimeout: 4000, //超时时间限制
+    clientId: 'clientUserId', //连接id
+    host: 'broker.emqx.io', //MQTT 服务器域名
+    port: '8083' //websocket 端口号
+  }
+```
