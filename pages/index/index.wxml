@@ -1,4 +1,4 @@
 <!--index.wxml-->
 <view>
-  {{message}}
+  <view wx:for="{{messageList}}" wx:key="index">{{messageList[index].msg}}</view>
 </view>

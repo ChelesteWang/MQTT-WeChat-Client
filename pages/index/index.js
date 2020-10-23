@@ -9,7 +9,8 @@ Page({
   data: {
     test: 'helloworld',
     message: '',
-    TopicList:["test1","test2","test3","test4"]
+    TopicList:["test1","test2","test3","test4"],
+    messageList:[]
   },
   onLoad: function () {
     this.initSocket();
@@ -55,8 +56,16 @@ Page({
       }, () => {
         console.log(that.data.message)
         var jsonobj = that.data.message
+        var messageList = that.data.messageList
         if (that.isJSON(jsonobj)) {
-          console.log(JSON.parse(jsonobj))
+          // 处理数据
+          messageList.push(JSON.parse(jsonobj))
+          // 上传数据库
+          console.log(messageList)
+          // console.log(JSON.parse(jsonobj))
+          that.setData({
+            messageList:messageList
+          })
         }
       })
     })
