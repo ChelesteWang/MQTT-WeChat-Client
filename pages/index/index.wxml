@@ -1,4 +1,4 @@
-<!--index.wxml-->
-<view>
-  {{message}}
+<view class="" hover-class="none" hover-stop-propagation="false">
+  123
+  <tempture_item list="{{list}}"></tempture_item>
 </view>
