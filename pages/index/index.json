@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "tempture-item":"../../components/tempture_item/tempture_item"
+    "tempture_item":"../../components/tempture_item/tempture_item"
   }
 }

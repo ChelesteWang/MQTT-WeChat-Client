@@ -1,5 +1,15 @@
 <view class="list">
-    <view wx:for="{{list}}" wx:key="id">
-        {{item.name}}---{{item.temp}}
+    <view class="white">
+        <text class="keting">客厅-iKair1</text>
+        <text class="node_number">当前节点{{list.length}}个</text>
     </view>
+    <block wx:for="{{list}}" wx:key="id">
+        <!-- 卡片 -->
+        <view class="content">
+            <text class="wenzi">温度</text>
+            <image class="img" src="../../public/温度.png" mode="aspectFit" lazy-load="false"></image>
+            <view class="node">当前节点:{{item.name}}</view>
+            <view class="temp"><text>{{item.temp}}℃</text></view>
+        </view>
+    </block>
 </view>
