@@ -1,3 +1,4 @@
+
 .list {
     background-color: #02e2ec;
     position: relative;
@@ -78,3 +79,4 @@
     left: 40rpx;
     top:85rpx;
 }
+

@@ -13,6 +13,7 @@ Page({
     TopicList: ["test1", "test2", "test3", "test4"],
     list: [
       {
+
         id: 1,
         name: 'node1',
         temp: 18.8
@@ -87,7 +88,7 @@ Page({
           console.log(messageList)
           // console.log(JSON.parse(jsonobj))
           that.setData({
-            messageList:messageList
+            messageList: messageList
           })
         }
       })
