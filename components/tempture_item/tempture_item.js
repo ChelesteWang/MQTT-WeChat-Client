@@ -7,7 +7,7 @@ Component({
     //todo 用来接收父向子传递的数据
     list: {
       type: Array,
-      value: []
+      value: [],
     }
   },
 
