@@ -1,7 +1,9 @@
 <view class="list">
     <view class="white">
-        <text class="keting">客厅-iKair1</text>
-        <text class="node_number">当前节点{{list.length}}个</text>
+        <text class="keting">MQTT 服务器 <text wx:if="{{list.length!=0}}">已连接</text>
+            <text wx:else>未连接</text>
+        </text>
+        <text class="node_number">当前已连接节点{{list.length}}个</text>
     </view>
     <block wx:for="{{list}}" wx:key="id">
         <!-- 卡片 -->

@@ -11,29 +11,27 @@ Page({
     message: '',
 
     TopicList: ["test1", "test2", "test3", "test4"],
-    list: [
-      {
-
-        id: 1,
-        name: 'node1',
-        temp: 18.8
-      },
-      {
-        id: 2,
-        name: 'node2',
-        temp: 26.3
-      },
-      {
-        id: 3,
-        name: 'node3',
-        temp: 26.3
-      }, {
-        id: 4,
-        name: 'node4',
-        temp: 26.3
-      },
-    ]
-    messageList:[]
+    list: [{
+      id: 1,
+      name: 'node1',
+      temp: 18.8
+    },
+    {
+      id: 2,
+      name: 'node2',
+      temp: 26.3
+    },
+    {
+      id: 3,
+      name: 'node3',
+      temp: 26.3
+    }, {
+      id: 4,
+      name: 'node4',
+      temp: 26.3
+    },
+    ],
+    messageList: []
 
   },
   onLoad: function () {
