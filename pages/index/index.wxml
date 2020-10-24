@@ -1,4 +1,6 @@
-<!--index.wxml-->
-<view>
+<view class="" hover-class="none" hover-stop-propagation="false">
+  123
+  <tempture_item list="{{list}}"></tempture_item>
   <view wx:for="{{messageList}}" wx:key="index">{{messageList[index].msg}}</view>
 </view>
+

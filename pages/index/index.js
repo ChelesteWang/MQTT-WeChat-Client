@@ -9,8 +9,31 @@ Page({
   data: {
     test: 'helloworld',
     message: '',
-    TopicList:["test1","test2","test3","test4"],
+
+    TopicList: ["test1", "test2", "test3", "test4"],
+    list: [
+      {
+        id: 1,
+        name: 'node1',
+        temp: 18.8
+      },
+      {
+        id: 2,
+        name: 'node2',
+        temp: 26.3
+      },
+      {
+        id: 3,
+        name: 'node3',
+        temp: 26.3
+      }, {
+        id: 4,
+        name: 'node4',
+        temp: 26.3
+      },
+    ]
     messageList:[]
+
   },
   onLoad: function () {
     this.initSocket();
@@ -45,7 +68,7 @@ Page({
     client.on('connect', function () {
       console.log('连接成功');
       //订阅
-      that.subscribeTopicList(client,that.data.TopicList)
+      that.subscribeTopicList(client, that.data.TopicList)
     })
 
     client.on('message', function (topic, payload) {
@@ -70,10 +93,10 @@ Page({
       })
     })
   },
-  subscribeTopicList:function(client,TopicList){
+  subscribeTopicList: function (client, TopicList) {
     for (let index = 0; index < TopicList.length; index++) {
       client.subscribe(TopicList[index])
-      console.log("订阅成功",TopicList[index])
+      console.log("订阅成功", TopicList[index])
     }
   }
 })
