@@ -1,3 +1,5 @@
 <view class="" hover-class="none" hover-stop-propagation="false">
   <tempture_item list="{{list}}"></tempture_item>
+  <view wx:for="{{messageList}}" wx:key="index">{{messageList[index].msg}}</view>
 </view>
+
