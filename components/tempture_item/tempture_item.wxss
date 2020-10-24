@@ -1,1 +1,82 @@
-/* compoents/tempture_item.wxss */
+
+.list {
+    background-color: #02e2ec;
+    position: relative;
+    padding: 150rpx 48rpx;
+}
+
+.white {
+    height: 200rpx;
+    width: 100%;
+    background-color: #ffffff;
+    /* border: 2rpx solid #00aabb; */
+    margin-bottom: 100rpx;
+}
+
+.keting {
+    position: absolute;
+    left: 150rpx;
+    transform: translateY(30rpx);
+    color: white;
+    font-size: 28rpx;
+}
+
+.node_number {
+    position: absolute;
+    left: 300rpx;
+    transform: translateY(60rpx);
+    color: white;
+    font-size: 28rpx;
+}
+
+.content {
+    background-color: #00aabb;
+    margin-bottom: 30rpx;
+    height: 190rpx;
+    border-radius: 5%;
+    color: white;
+    font-size: 30rpx;
+    position: relative;
+}
+
+.img {
+    width: 80rpx;
+    height: 100rpx;
+    /* margin-bottom: 100rpx; */
+    position: absolute;
+    top: 50rpx;
+    left: 5rpx;
+
+}
+
+.wenzi {
+    font-size: large;
+    margin-left: 10rpx;
+}
+
+.node {
+    margin-left: 100rpx;
+    margin-top: 20rpx;
+    font-size: large;
+}
+
+.temp {
+    margin-left: 420rpx;
+    height: 280rpx;
+    width: 280rpx;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1000;
+    position: relative;
+    top: -150rpx;
+    box-shadow: 2rpx -10rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.temp text{
+    position: relative;
+    font-size: 70rpx;
+    color: #d3e5be;
+    left: 40rpx;
+    top:85rpx;
+}
+

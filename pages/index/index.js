@@ -9,8 +9,11 @@ Page({
   data: {
     test: 'helloworld',
     message: '',
+
     TopicList: ["test1", "test2", "test3", "test4"],
-    list: [{
+    list: [
+      {
+
         id: 1,
         name: 'node1',
         temp: 18.8
@@ -29,8 +32,9 @@ Page({
         name: 'node4',
         temp: 26.3
       },
-    ],
-    messageList: []
+    ]
+    messageList:[]
+
   },
   onLoad: function () {
     this.initSocket();
