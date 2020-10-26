@@ -12,24 +12,24 @@ Page({
 
     TopicList: ["test1", "test2", "test3", "test4"],
     list: [{
-      id: 1,
-      name: 'node1',
-      temp: 18.8
-    },
-    {
-      id: 2,
-      name: 'node2',
-      temp: 26.3
-    },
-    {
-      id: 3,
-      name: 'node3',
-      temp: 26.3
-    }, {
-      id: 4,
-      name: 'node4',
-      temp: 26.3
-    },
+        id: 1,
+        name: 'node1',
+        temp: 18.8
+      },
+      {
+        id: 2,
+        name: 'node2',
+        temp: 26.3
+      },
+      {
+        id: 3,
+        name: 'node3',
+        temp: 26.3
+      }, {
+        id: 4,
+        name: 'node4',
+        temp: 26.3
+      },
     ],
     messageList: []
 
@@ -81,16 +81,42 @@ Page({
         var messageList = that.data.messageList
         if (that.isJSON(jsonobj)) {
           // 处理数据
-          messageList.push(JSON.parse(jsonobj))
+          var jsonobject = JSON.parse(jsonobj)
+          var node = jsonobject.deviceName
+          var data = base64.decode(jsonobject.data)
+          var msg = {
+            "node": node,
+            "data": data,
+          }
+          var list =that.data.list
+          var index = (list || []).findIndex((list1) => 
+            list1.name == msg.node         
+          )
+          list[index].name=msg.node
+          list[index].temp=msg.data
+          // messageList.push(msg)
           // 上传数据库
           console.log(messageList)
           // console.log(JSON.parse(jsonobj))
           that.setData({
-            messageList: messageList
+            messageList: messageList,
+            list:list
+            // "list[index].name":msg.node,
+            // "list[index].temp":msg.data
           })
         }
       })
     })
+  },
+
+  changeMessageList: function (msg) {
+    // var list = this.data.list
+    // var index = (list || []).findIndex((list) => {
+    //   list.node = msg.node
+    // })
+    // return index
+    // list[index].name = msg.node
+    // list[index].temp = msg.data
   },
   subscribeTopicList: function (client, TopicList) {
     for (let index = 0; index < TopicList.length; index++) {
